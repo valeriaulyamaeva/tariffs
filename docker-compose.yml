@@ -1,0 +1,26 @@
+services:
+  app:
+    image: bwhtern/basic-app-1:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./html:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - YII_ENV=dev
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: yii2tariffs
+      MYSQL_PASSWORD: root
+    ports:
+      - "3307:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+
+volumes:
+  dbdata:
