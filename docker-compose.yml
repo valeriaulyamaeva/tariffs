@@ -1,6 +1,6 @@
 services:
   app:
-    image: bwhtern/basic-app-1:latest
+    build: .
     ports:
       - "8080:8080"
     volumes:
