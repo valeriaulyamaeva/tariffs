@@ -6,6 +6,7 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'yii2tariffs',
     'basePath' => dirname(__DIR__),
+    'defaultRoute' => 'subscriber-web/create',
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
