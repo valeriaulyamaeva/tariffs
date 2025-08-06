@@ -41,8 +41,6 @@ $this->title = 'Создание абонента';
 
 <?= $form->field($model, 'tariff_id')->dropDownList(ArrayHelper::map($tariffs, 'id', 'name'), ['prompt' => 'Выберите тариф'])->label(false) ?>
 
-<!-- поле блокировки удалено -->
-
 <div class="form-group">
     <?= Html::submitButton('Создать', ['class' => 'btn btn-success']) ?>
 </div>

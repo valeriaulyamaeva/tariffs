@@ -7,12 +7,6 @@ use yii\web\Response;
 use yii\filters\ContentNegotiator;
 use app\models\Tariff;
 
-/**
- * @OA\Tag(
- *     name="Tariff",
- *     description="Список тарифов"
- * )
- */
 class TariffController extends Controller
 {
     public function behaviors(){
