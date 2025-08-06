@@ -6,16 +6,14 @@ RUN apt-get update && apt-get install -y \
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-WORKDIR /var/www/html
+WORKDIR /var/www/app
 
-COPY html/ .
-
-RUN apt-get update && apt-get install -y curl
-RUN curl -v https://cdn.asset-packagist.org/packages.js
+COPY app/ .
 
 RUN composer install
 
 EXPOSE 8080
 
-CMD ["php", "yii", "serve", "--port=8080", "--docroot=web", "0.0.0.0"]
+CMD ["php", "./yii", "serve", "--port=8080", "--docroot=web", "0.0.0.0"]
+
 

@@ -4,10 +4,7 @@
     <option name="configurations">
       <list>
         <Configuration>
-          <option name="path" value="$PROJECT_DIR$/tests" />
-        </Configuration>
-        <Configuration>
-          <option name="path" value="$PROJECT_DIR$/html/tests" />
+          <option name="path" value="$PROJECT_DIR$/app/tests" />
         </Configuration>
       </list>
     </option>
